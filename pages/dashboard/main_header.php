@@ -413,38 +413,43 @@ $conn->close();
           </div>
           <!-- /.box -->
 
-          <!-- quick email widget -->
-          <div class="box box-info">
-            <div class="box-header">
-              <i class="fa fa-envelope"></i>
+          <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>How to send mail in php using PHPMailer</h4>
+            </div>
+            <div class="card-body">
 
-              <h3 class="box-title">Quick Email</h3>
-              <!-- tools box -->
-              <div class="pull-right box-tools">
-                <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove">
-                  <i class="fa fa-times"></i></button>
-              </div>
-              <!-- /. tools -->
-            </div>
-            <div class="box-body">
-              <form action="#" method="post">
-                <div class="form-group">
-                  <input type="email" class="form-control" name="emailto" placeholder="Email to:">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject">
-                </div>
-                <div>
-                  <textarea class="textarea" placeholder="Message" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-                </div>
-              </form>
-            </div>
-            <div class="box-footer clearfix">
-              <button type="button" class="pull-right btn btn-default" id="sendEmail">Send
-                <i class="fa fa-arrow-circle-right"></i></button>
-            </div>
-          </div>
+                <form action="send_email.php" method="POST">
 
+                    <div class="mb-3">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" name="full_name" id="fullname" required class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="email_address">Email Address</label>
+                        <input type="email" name="email" id="email_address" required class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject" required class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" required class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" name="submitContact" class="btn btn-primary">Send Mail</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   
         </section>
         <!-- /.Left col -->
         <!-- right col (We are only adding the ID to make the widgets sortable)-->
